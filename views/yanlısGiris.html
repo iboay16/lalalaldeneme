@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uyarı Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .alert-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .alert-message {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .try-again-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .try-again-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-container">
+        <p class="alert-message">Şifre yanlış! Lütfen tekrar deneyin.</p>
+        <a href="/" id="tekrardeneyin" class="try-again-btn">Tekrar Deneyin</a>
+        <label id="hak">KALAN HAK <span id="sayacc">3</span></label>
+    </div>
+    <script>
+
+        //TARAYICIDA SAYAC DEĞİŞKENİNİ TUTAR
+       var sayacc = localStorage.getItem('sayacc');
+
+if (sayacc === null) {
+    sayacc = 3;
+    localStorage.setItem('sayacc', sayacc);
+}
+document.getElementById("sayacc").innerText = sayacc;
+
+document.getElementById("tekrardeneyin").addEventListener("click", function() {
+    if (sayacc > 0) {
+        sayacc--;
+        localStorage.setItem('sayacc', sayacc);
+        document.getElementById("sayacc").innerText = sayac;
+        window.location.href = "/views/loginPage.html";
+    } else {
+        alert("Hakkınız tükendi Patladı");
+        document.getElementById("tekrardeneyin").style.pointerEvents = "none";
+        document.getElementById("tekrardeneyin").style.backgroundColor = "#ccc";
+
+    }
+});
+    </script>
+</body>
+</html>

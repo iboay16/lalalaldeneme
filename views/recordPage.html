@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Register Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+   
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="text-center">
+    <form class="form-signin" method="post" action="/kayit">
+        <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+        
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" name="kullanici_adi" class="form-control" placeholder="Username" required autofocus>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <br>
+        <input type="email" name="email" class="form-control" placeholder="Email address" required>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <br>
+        <input type="password" name="sifre" class="form-control" placeholder="Password" required>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

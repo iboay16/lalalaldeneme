@@ -1,0 +1,12 @@
+extends ../layaout/main-layout.pug
+
+block content
+    .row 
+       .col-md-4
+           img(src=`/img/${product.imageUrl} alt=${product.descripiton}`) 
+           .img-fluid
+       .col-md-8.pl-4
+           p #{product.descripiton}
+           hr
+           p price: #{product.price}
+           button(type="submit").btn.btn-primart.btn-lg  Add to Cart            

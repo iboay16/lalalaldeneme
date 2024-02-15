@@ -1,0 +1,34 @@
+extends ../layaout/main-layout.pug
+
+block content
+  #mySlider.carousel.slide(data-ride="carousel")
+    ol.carousel-indicators
+      li(data-target="#mySlider", data-slide-to="0")
+      li(data-target="#mySlider", data-slide-to="1")
+      li(data-target="#mySlider", data-slide-to="2")
+    div.carousel-inner
+      div.carousel-item.active
+        img(src="https://via.placeholder.com/500", class="img-fluid", alt="Image 0")
+      div.carousel-item
+        img(src="https://via.placeholder.com/500", class="img-fluid", alt="Image 1")
+      div.carousel-item
+        img(src="https://via.placeholder.com/100", class="img-fluid", alt="Image 2")
+    a(href="#mySlider", class="carousel-control-prev", data-slide="prev")
+      span.carousel-control-prev-icon
+    a(href="#mySlider", class="carousel-control-next", data-slide="next")
+      span.carousel-control-next-icon
+
+  div.row
+    each product in products
+      div.col-md-4
+        div.card.my-3
+          img(src=`/img/${product.name}`, class="img-fluid", alt=`${product.description}`)
+          div.card-body
+            h4.card-title
+              a(href=`/products/${product.id}`) #{product.name}
+              small.text-muted
+                i.fa.fa-try #{product.price}
+              |
+              a.btn.btn-secondary.btn-sm.ml-3(href=`/products/${product.id}`) Details
+              | 
+              a.btn.btn-secondary.btn-sm.ml-3(href="#") Add to Cart

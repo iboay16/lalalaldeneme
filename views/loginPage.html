@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="text-center">
+    <form class="form-signin" action="/" method="post">
+        <img class="mb-4" src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+        <label for="inputEmail" class="sr-only">Kullanıcı Adı</label>
+        <input type="text"  name="kullaniciAdi" class="form-control" placeholder="Kullanıcı Adı" required autofocus>
+        <br>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="sifre"  class="form-control" placeholder="Şifre" required>
+        <br>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Beni Hatırla</label>
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" value="Login" type="submit" onclick="lsRememberMe()">Giriş Yap</button>
+        <button class="btn btn-lg btn-primary btn-block" value="Login" type="submit" onclick="lsRememberMe()">Kayıt Olmadan Devam Et</button>
+        
+        <p class="mt-5 mb-3 text-muted">&copy; 2024</p>
+    </form>
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+
+</body>
+</html>
